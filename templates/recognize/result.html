@@ -1,0 +1,286 @@
+{% load i18n %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE|default:'ru' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% trans "Recognition result" %} — {% trans "Altyn Altai" %}</title>
+
+  <meta name="theme-color" content="#7c3aed">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="{% trans 'Altyn Altai' %}">
+
+  <link rel="manifest" href="/static/manifest.json">
+  <link rel="icon" href="/static/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+
+  {% include "includes/header.html" %}
+
+  <section class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+    <div class="mb-8">
+      <div class="text-sm font-semibold uppercase tracking-wider text-violet-700 dark:text-violet-400">
+        {% trans "Recognition" %}
+      </div>
+      <h1 class="mt-2 text-3xl md:text-4xl font-extrabold">
+        {% trans "Recognition result" %}
+      </h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-2xl">
+        {% trans "Below is the predicted mineral, its probability, and additional information about the sample." %}
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-[420px_1fr] gap-8">
+      <!-- IMAGE -->
+      <div class="rounded-[2rem] border border-slate-200 bg-white shadow-sm overflow-hidden dark:bg-slate-900 dark:border-slate-800">
+        <div class="aspect-square bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+          {% if item.image %}
+            <img src="{{ item.image.url }}" alt="{% trans 'Recognized image' %}" class="w-full h-full object-cover">
+          {% else %}
+            <div class="text-slate-400 text-sm">{% trans "No image available" %}</div>
+          {% endif %}
+        </div>
+
+        <div class="p-5 border-t border-slate-100 dark:border-slate-800">
+          <div class="text-sm text-slate-500 dark:text-slate-400">
+            {% trans "Recognition source" %}
+          </div>
+          <div class="mt-1 font-semibold text-slate-900 dark:text-white">
+            {% if item.source == "camera" %}
+              {% trans "Camera" %}
+            {% else %}
+              {% trans "Upload" %}
+            {% endif %}
+          </div>
+
+          <div class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+            {% trans "Date" %}
+          </div>
+          <div class="mt-1 font-semibold text-slate-900 dark:text-white">
+            {{ item.created_at|date:"d.m.Y H:i" }}
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN RESULT -->
+      <div class="space-y-6">
+        <div class="rounded-[2rem] border border-slate-200 bg-white shadow-sm p-6 dark:bg-slate-900 dark:border-slate-800">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <div class="text-sm font-semibold uppercase tracking-wider text-violet-700 dark:text-violet-400">
+                {% trans "Top result" %}
+              </div>
+
+              <h2 class="mt-2 text-3xl font-extrabold text-slate-900 dark:text-white">
+                {% if predicted_mineral %}
+                  {{ predicted_mineral.title }}
+                {% elif mineral_info %}
+                  {{ mineral_info.title }}
+                {% else %}
+                  {{ item.top1_label }}
+                {% endif %}
+              </h2>
+
+              <p class="mt-3 text-slate-600 dark:text-slate-300">
+                {% trans "The system selected this sample as the most probable result." %}
+              </p>
+            </div>
+
+            <div class="rounded-2xl bg-violet-50 border border-violet-100 px-5 py-4 dark:bg-slate-800 dark:border-slate-700">
+              <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Confidence" %}</div>
+              <div class="mt-1 text-2xl font-extrabold text-violet-700 dark:text-violet-400">
+                {{ item.top1_conf|floatformat:2 }}%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INFO BLOCK -->
+        <div class="rounded-[2rem] border border-slate-200 bg-white shadow-sm p-6 dark:bg-slate-900 dark:border-slate-800">
+          <div class="text-sm font-semibold uppercase tracking-wider text-violet-700 dark:text-violet-400">
+            {% trans "Mineral information" %}
+          </div>
+
+          {% if predicted_mineral %}
+            <div class="grid md:grid-cols-2 gap-5 mt-5">
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Title" %}</div>
+                <div class="mt-1 font-semibold text-slate-900 dark:text-white">{{ predicted_mineral.title }}</div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Formula" %}</div>
+                <div class="mt-1 font-semibold text-slate-900 dark:text-white">
+                  {{ predicted_mineral.formula|default:"—" }}
+                </div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Color" %}</div>
+                <div class="mt-1 font-semibold text-slate-900 dark:text-white">
+                  {{ predicted_mineral.color|default:"—" }}
+                </div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Hardness" %}</div>
+                <div class="mt-1 font-semibold text-slate-900 dark:text-white">
+                  {{ predicted_mineral.hardness|default:"—" }}
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 space-y-5">
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Description" %}</div>
+                <div class="mt-1 text-slate-800 leading-7 dark:text-slate-200">
+                  {{ predicted_mineral.description|default:"—" }}
+                </div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Origin" %}</div>
+                <div class="mt-1 text-slate-800 leading-7 dark:text-slate-200">
+                  {{ predicted_mineral.origin|default:"—" }}
+                </div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Usage" %}</div>
+                <div class="mt-1 text-slate-800 leading-7 dark:text-slate-200">
+                  {{ predicted_mineral.usage|default:"—" }}
+                </div>
+              </div>
+            </div>
+
+          {% elif mineral_info %}
+            <div class="grid md:grid-cols-2 gap-5 mt-5">
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Title" %}</div>
+                <div class="mt-1 font-semibold text-slate-900 dark:text-white">{{ mineral_info.title }}</div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Formula" %}</div>
+                <div class="mt-1 font-semibold text-slate-900 dark:text-white">
+                  {{ mineral_info.formula|default:"—" }}
+                </div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Color" %}</div>
+                <div class="mt-1 font-semibold text-slate-900 dark:text-white">
+                  {{ mineral_info.color|default:"—" }}
+                </div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Hardness" %}</div>
+                <div class="mt-1 font-semibold text-slate-900 dark:text-white">
+                  {{ mineral_info.hardness|default:"—" }}
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 space-y-5">
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Description" %}</div>
+                <div class="mt-1 text-slate-800 leading-7 dark:text-slate-200">
+                  {{ mineral_info.description|default:"—" }}
+                </div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Origin" %}</div>
+                <div class="mt-1 text-slate-800 leading-7 dark:text-slate-200">
+                  {{ mineral_info.origin|default:"—" }}
+                </div>
+              </div>
+
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "Usage" %}</div>
+                <div class="mt-1 text-slate-800 leading-7 dark:text-slate-200">
+                  {{ mineral_info.usage|default:"—" }}
+                </div>
+              </div>
+            </div>
+
+          {% else %}
+            <div class="mt-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-slate-600 dark:bg-slate-950 dark:border-slate-800 dark:text-slate-300">
+              {% trans "No additional mineral information was found in the database." %}
+            </div>
+          {% endif %}
+        </div>
+
+        <!-- TOP 3 -->
+        <div class="rounded-[2rem] border border-slate-200 bg-white shadow-sm p-6 dark:bg-slate-900 dark:border-slate-800">
+          <div class="text-sm font-semibold uppercase tracking-wider text-violet-700 dark:text-violet-400">
+            {% trans "Top-3 predictions" %}
+          </div>
+
+          <div class="mt-5 space-y-3">
+            <div class="flex items-center justify-between rounded-2xl bg-violet-50 border border-violet-100 px-4 py-4 dark:bg-slate-800 dark:border-slate-700">
+              <div>
+                <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "1st place" %}</div>
+                <div class="font-semibold text-slate-900 dark:text-white">{{ item.top1_label }}</div>
+              </div>
+              <div class="text-lg font-bold text-violet-700 dark:text-violet-400">
+                {{ item.top1_conf|floatformat:2 }}%
+              </div>
+            </div>
+
+            {% if item.top2_label %}
+              <div class="flex items-center justify-between rounded-2xl border border-slate-200 px-4 py-4 dark:border-slate-700">
+                <div>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "2nd place" %}</div>
+                  <div class="font-semibold text-slate-900 dark:text-white">{{ item.top2_label }}</div>
+                </div>
+                <div class="text-lg font-bold text-slate-700 dark:text-slate-300">
+                  {{ item.top2_conf|floatformat:2 }}%
+                </div>
+              </div>
+            {% endif %}
+
+            {% if item.top3_label %}
+              <div class="flex items-center justify-between rounded-2xl border border-slate-200 px-4 py-4 dark:border-slate-700">
+                <div>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">{% trans "3rd place" %}</div>
+                  <div class="font-semibold text-slate-900 dark:text-white">{{ item.top3_label }}</div>
+                </div>
+                <div class="text-lg font-bold text-slate-700 dark:text-slate-300">
+                  {{ item.top3_conf|floatformat:2 }}%
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="flex flex-wrap gap-4">
+          <a href="{% url 'recognize:upload' %}"
+             class="px-5 py-3 rounded-2xl bg-violet-600 text-white font-semibold hover:bg-violet-700">
+            {% trans "Recognize another photo" %}
+          </a>
+
+          <a href="{% url 'accounts:cabinet' %}"
+             class="px-5 py-3 rounded-2xl border border-slate-200 bg-white font-semibold hover:bg-slate-50 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800">
+            {% trans "Back to cabinet" %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+{
+    "1054296935": [
+        {
+            "date": "2026-05-13 19:14:49",
+            "name": "Chrysoprase",
+            "confidence": 34.53,
+            "image_path": "telegram_bot/uploads/AQADaRdrG_5kIEh-.jpg",
+            "top3": [
+                {
+                    "name": "Chrysoprase",
+                    "confidence": 34.533504486083984
+                },
+                {
+                    "name": "apatite",
+                    "confidence": 15.498074531555176
+                },
+                {
+                    "name": "phlogopite",
+                    "confidence": 14.945359230041504
+                }
+            ]
+        },
+        {
+            "date": "2026-05-13 19:10:20",
+            "name": "azurite",
+            "confidence": 90.88,
+            "image_path": "telegram_bot/uploads/AQADWRdrG_5kIEh-.jpg",
+            "top3": [
+                {
+                    "name": "azurite",
+                    "confidence": 90.87882995605469
+                },
+                {
+                    "name": "goethitelimonite",
+                    "confidence": 2.945068120956421
+                },
+                {
+                    "name": "granite",
+                    "confidence": 2.907750129699707
+                }
+            ]
+        },
+        {
+            "date": "2026-05-13 19:09:55",
+            "name": "Chrysoprase",
+            "confidence": 68.34,
+            "image_path": "telegram_bot/uploads/AQADVxdrG_5kIEh-.jpg",
+            "top3": [
+                {
+                    "name": "Chrysoprase",
+                    "confidence": 68.33720397949219
+                },
+                {
+                    "name": "granite",
+                    "confidence": 25.717815399169922
+                },
+                {
+                    "name": "hematiteFeO",
+                    "confidence": 1.3964736461639404
+                }
+            ]
+        },
+        {
+            "date": "2026-05-13 19:04:22",
+            "name": "datoliticskarn",
+            "confidence": 81.55,
+            "image_path": "telegram_bot/uploads/AQADUxdrG_5kIEh-.jpg",
+            "top3": [
+                {
+                    "name": "datoliticskarn",
+                    "confidence": 81.55498504638672
+                },
+                {
+                    "name": "chalcedonyagate",
+                    "confidence": 7.82415771484375
+                },
+                {
+                    "name": "jadeite",
+                    "confidence": 5.132079124450684
+                }
+            ]
+        },
+        {
+            "date": "2026-05-13 19:04:01",
+            "name": "fluorite5",
+            "confidence": 68.15,
+            "image_path": "telegram_bot/uploads/AQADUhdrG_5kIEh-.jpg",
+            "top3": [
+                {
+                    "name": "fluorite5",
+                    "confidence": 68.14559173583984
+                },
+                {
+                    "name": "phlogopite",
+                    "confidence": 10.092967987060547
+                },
+                {
+                    "name": "granite",
+                    "confidence": 6.306384563446045
+                }
+            ]
+        },
+        {
+            "date": "2026-05-13 19:03:33",
+            "name": "volcanicbomb",
+            "confidence": 99.86,
+            "image_path": "telegram_bot/uploads/AQADURdrG_5kIEh-.jpg",
+            "top3": [
+                {
+                    "name": "volcanicbomb",
+                    "confidence": 99.857421875
+                },
+                {
+                    "name": "amphibolite",
+                    "confidence": 0.12542887032032013
+                },
+                {
+                    "name": "halite",
+                    "confidence": 0.00455101253464818
+                }
+            ]
+        },
+        {
+            "date": "2026-05-13 18:34:34",
+            "name": "violan",
+            "confidence": 98.58,
+            "image_path": "telegram_bot/uploads/AQADNhdrG_5kIEh-.jpg",
+            "top3": [
+                {
+                    "name": "violan",
+                    "confidence": 98.57833099365234
+                },
+                {
+                    "name": "quartzpink",
+                    "confidence": 0.4795130491256714
+                },
+                {
+                    "name": "fluorite",
+                    "confidence": 0.2752658426761627
+                }
+            ]
+        }
+    ],
+    "5063222815": [
+        {
+            "date": "2026-05-13 19:40:48",
+            "name": "granite",
+            "confidence": 100.0,
+            "image_path": "telegram_bot/uploads/AQAD2xRrGy5aIUh-.jpg",
+            "top3": [
+                {
+                    "name": "granite",
+                    "confidence": 100.0
+                },
+                {
+                    "name": "gypsumselenite",
+                    "confidence": 2.3307079572987277e-06
+                },
+                {
+                    "name": "dunite",
+                    "confidence": 1.603324761845215e-07
+                }
+            ]
+        },
+        {
+            "date": "2026-05-13 19:39:12",
+            "name": "granite",
+            "confidence": 100.0,
+            "image_path": "telegram_bot/uploads/AQAD2RRrGy5aIUh-.jpg",
+            "top3": [
+                {
+                    "name": "granite",
+                    "confidence": 99.9950180053711
+                },
+                {
+                    "name": "basalt",
+                    "confidence": 0.002661826554685831
+                },
+                {
+                    "name": "andesiticporphyrite",
+                    "confidence": 0.0009200438507832587
+                }
+            ]
+        }
+    ]
+}

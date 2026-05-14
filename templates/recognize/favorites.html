@@ -1,0 +1,150 @@
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'ru' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite minerals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 min-h-screen text-slate-900">
+
+{% include "includes/header.html" %}
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+  <section class="rounded-[32px] bg-white border border-slate-200 shadow-sm p-8 mb-10">
+    <div class="text-rose-600 text-sm font-black uppercase tracking-widest">
+      Favorites
+    </div>
+
+    <h1 class="mt-3 text-5xl font-black">
+      ❤️ Избранные минералы
+    </h1>
+
+    <p class="mt-4 text-slate-500 text-lg">
+      Здесь сохраняются минералы, которые вы добавили в избранное после распознавания.
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-4">
+      <a href="{% url 'recognize:upload' %}"
+         class="px-6 py-3 rounded-2xl bg-violet-600 text-white font-bold hover:bg-violet-700 transition">
+        🔎 Распознать минерал
+      </a>
+
+      <a href="{% url 'recognize:history' %}"
+         class="px-6 py-3 rounded-2xl border border-slate-200 hover:bg-slate-50 font-bold transition">
+        📜 История
+      </a>
+    </div>
+  </section>
+
+  {% if favorites %}
+    <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      {% for item in favorites %}
+        <article class="rounded-[28px] bg-white border border-slate-200 shadow-sm p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <div class="text-xs font-black text-violet-600 uppercase tracking-widest">
+                Mineral
+              </div>
+
+              <h2 class="mt-2 text-3xl font-black">
+                🪨 {{ item.info.title|default:item.name }}
+              </h2>
+            </div>
+
+            <a href="{% url 'recognize:remove_favorite' item.name %}"
+               class="px-4 py-2 rounded-xl bg-rose-50 text-rose-700 font-bold hover:bg-rose-100 transition">
+              Удалить
+            </a>
+          </div>
+
+          <p class="mt-4 text-slate-500 leading-relaxed">
+            {{ item.info.description|default:"Описание отсутствует." }}
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <div class="text-xs font-bold text-slate-400">Формула</div>
+              <div class="mt-1 font-black">{{ item.info.formula|default:"—" }}</div>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <div class="text-xs font-bold text-slate-400">Цвет</div>
+              <div class="mt-1 font-black">{{ item.info.color|default:"—" }}</div>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <div class="text-xs font-bold text-slate-400">Твёрдость</div>
+              <div class="mt-1 font-black">{{ item.info.hardness|default:"—" }}</div>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <div class="text-xs font-bold text-slate-400">Тип</div>
+              <div class="mt-1 font-black">{{ item.info.type|default:"Минерал" }}</div>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <div class="text-xs font-bold text-slate-400">Блеск</div>
+              <div class="mt-1 font-black">{{ item.info.luster|default:"—" }}</div>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <div class="text-xs font-bold text-slate-400">Сингония</div>
+              <div class="mt-1 font-black">{{ item.info.crystal_system|default:"—" }}</div>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl border border-slate-200 p-5">
+            <div class="font-black">🌍 Происхождение</div>
+            <p class="mt-2 text-slate-600">{{ item.info.origin|default:"—" }}</p>
+          </div>
+
+          <div class="mt-4 rounded-2xl border border-slate-200 p-5">
+            <div class="font-black">🏭 Применение</div>
+            <p class="mt-2 text-slate-600">{{ item.info.uses|default:"—" }}</p>
+          </div>
+
+          <div class="mt-4 rounded-2xl border border-slate-200 p-5">
+            <div class="font-black">⛏ Месторождения</div>
+
+            <ul class="mt-2 list-disc pl-6 text-slate-600 space-y-1">
+              {% for deposit in item.info.deposits %}
+                <li>{{ deposit }}</li>
+              {% empty %}
+                <li>—</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="mt-4 rounded-2xl border border-slate-200 p-5">
+            <div class="font-black">💡 Интересные факты</div>
+
+            <ul class="mt-2 list-disc pl-6 text-slate-600 space-y-1">
+              {% for fact in item.info.interesting_facts %}
+                <li>{{ fact }}</li>
+              {% empty %}
+                <li>—</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+  {% else %}
+    <section class="rounded-[32px] bg-white border border-slate-200 shadow-sm p-12 text-center">
+      <div class="text-6xl">❤️</div>
+      <h2 class="mt-4 text-3xl font-black">Избранное пока пустое</h2>
+      <p class="mt-3 text-slate-500">
+        Распознайте минерал и добавьте его в избранное.
+      </p>
+    </section>
+  {% endif %}
+
+</main>
+
+</body>
+</html>

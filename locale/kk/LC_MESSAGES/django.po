@@ -1,0 +1,760 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-26 02:55+0500\n"
+"Language: kk\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: .\accounts\views.py:30 .\templates\includes\header.html:94
+msgid "Login"
+msgstr ""
+
+#: .\accounts\views.py:54 .\templates\includes\header.html:99
+msgid "Register"
+msgstr ""
+
+#: .\accounts\views.py:68 .\templates\includes\header.html:80
+#: .\templates\recognize\upload.html:27
+msgid "Cabinet"
+msgstr ""
+
+#: .\config\settings.py:170
+msgid "Kazakh"
+msgstr ""
+
+#: .\config\settings.py:171
+msgid "Russian"
+msgstr ""
+
+#: .\config\settings.py:172
+msgid "English"
+msgstr ""
+
+#: .\recognize\views.py:142
+msgid "Please select an image."
+msgstr ""
+
+#: .\recognize\views.py:180
+msgid "Image was not captured."
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:7 .\templates\pages\home.html:7
+#: .\templates\recognize\camera.html:7
+msgid "Altyn Altai — mineral museum"
+msgstr "Алтын Алтай — минералдар музейі"
+
+#: .\templates\accounts\cabinet.html:13 .\templates\includes\header.html:9
+#: .\templates\pages\home.html:13 .\templates\pages\home.html:129
+#: .\templates\recognize\camera.html:13 .\templates\recognize\result.html:7
+#: .\templates\recognize\result.html:13
+msgid "Altyn Altai"
+msgstr "Алтын Алтай"
+
+#: .\templates\accounts\cabinet.html:36
+msgid "Profile"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:39
+msgid "Hello"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:54 .\templates\accounts\cabinet.html:142
+msgid "My data"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:56
+msgid "Username, email, registration date"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:71
+msgid "Recognition history"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:74
+msgid "All uploaded and recognized samples"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:89
+msgid "Statistics"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:92
+msgid "Recognition statistics and popular minerals"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:104
+#, fuzzy
+#| msgid "Education"
+msgid "Application"
+msgstr "Білім беру"
+
+#: .\templates\accounts\cabinet.html:116
+#, fuzzy
+#| msgid "Interactive route"
+msgid "Interface language"
+msgstr "Интерактивті маршрут"
+
+#: .\templates\accounts\cabinet.html:119
+msgid "Choose your preferred language"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:149
+msgid "Username"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:158
+msgid "Email"
+msgstr ""
+
+#: .\templates\accounts\cabinet.html:171
+msgid "Registration date"
+msgstr ""
+
+#: .\templates\base.html:7 .\templates\base.html:81
+#: .\templates\pages\home.html:338 .\templates\recognize\upload.html:16
+#, fuzzy
+#| msgid "Altyn Altai"
+msgid "Altyn Altai Museum"
+msgstr "Алтын Алтай"
+
+#: .\templates\base.html:87 .\templates\pages\home.html:37
+msgid "Language"
+msgstr "Тіл"
+
+#: .\templates\base.html:99 .\templates\pages\home.html:51
+msgid "Change"
+msgstr "Өзгерту"
+
+#: .\templates\base.html:109
+msgid "Mineral recognition system for museum exhibits"
+msgstr "Музей экспонаттарына арналған минералдарды тану жүйесі"
+
+#: .\templates\includes\header.html:10
+#, fuzzy
+#| msgid "Digital showcase of minerals"
+msgid "Museum of minerals"
+msgstr "Минералдардың цифрлық витринасы"
+
+#: .\templates\includes\header.html:17 .\templates\pages\home.html:340
+msgid "About museum"
+msgstr "Музей туралы"
+
+#: .\templates\includes\header.html:22 .\templates\pages\home.html:210
+#: .\templates\pages\home.html:227 .\templates\pages\home.html:341
+msgid "Collection"
+msgstr "Коллекция"
+
+#: .\templates\includes\header.html:27 .\templates\pages\home.html:168
+#: .\templates\pages\home.html:274 .\templates\pages\home.html:342
+msgid "Excursions"
+msgstr "Экскурсиялар"
+
+#: .\templates\includes\header.html:32 .\templates\pages\home.html:216
+msgid "Map"
+msgstr "Карта"
+
+#: .\templates\includes\header.html:37
+msgid "Gallery"
+msgstr ""
+
+#: .\templates\includes\header.html:42
+#, fuzzy
+#| msgid "Recognize a mineral"
+msgid "Recognize"
+msgstr "Минералды таны"
+
+#: .\templates\includes\header.html:51
+msgid "Switch theme"
+msgstr ""
+
+#: .\templates\includes\header.html:87
+msgid "Logout"
+msgstr ""
+
+#: .\templates\pages\home.html:66
+msgid "Interactive museum web portal based on machine learning"
+msgstr "Машиналық оқытуға негізделген интерактивті музейлік веб-портал"
+
+#: .\templates\pages\home.html:70
+msgid "Recognize a mineral"
+msgstr "Минералды таны"
+
+#: .\templates\pages\home.html:72
+msgid "in seconds"
+msgstr "бірнеше секундта"
+
+#: .\templates\pages\home.html:77
+#, fuzzy
+#| msgid ""
+#| "The digital platform of the \"Altyn Altai\" museum combines mineral "
+#| "recognition from photos,\n"
+#| "a virtual collection, excursion materials, and educational content\n"
+#| "about the origin, composition, and use of rocks."
+msgid ""
+"\n"
+"            The digital platform of the \"Altyn Altai\" museum combines "
+"mineral recognition from photos,\n"
+"            a virtual collection, excursion materials, and educational "
+"content\n"
+"            about the origin, composition, and use of rocks.\n"
+"            "
+msgstr ""
+"«Алтын Алтай» музейінің цифрлық платформасы фотосурет арқылы минералдарды "
+"тануды,\n"
+"виртуалды коллекцияны, экскурсиялық материалдарды және тау жыныстарының\n"
+"шығу тегі, құрамы мен қолданылуы туралы білім беру мазмұнын біріктіреді."
+
+#: .\templates\pages\home.html:87
+msgid "Recognize with camera"
+msgstr "Камера арқылы тану"
+
+#: .\templates\pages\home.html:92 .\templates\pages\home.html:325
+msgid "Upload photo"
+msgstr "Фото жүктеу"
+
+#: .\templates\pages\home.html:103
+msgid "Exhibit of the week"
+msgstr "Аптаның экспонаты"
+
+#: .\templates\pages\home.html:104
+msgid "Malachite • Quartz • Obsidian"
+msgstr "Малахит • Кварц • Обсидиан"
+
+#: .\templates\pages\home.html:107
+msgid "digital collection"
+msgstr "цифрлық коллекция"
+
+#: .\templates\pages\home.html:118
+msgid "What the user gets"
+msgstr "Пайдаланушы не алады"
+
+#: .\templates\pages\home.html:120
+msgid "mineral identification from an uploaded photo"
+msgstr "жүктелген фото арқылы минералды анықтау"
+
+#: .\templates\pages\home.html:121
+msgid "Top-3 results with probabilities"
+msgstr "ықтималдықтарымен бірге Топ-3 нәтиже"
+
+#: .\templates\pages\home.html:122
+msgid "access to the digital collection and museum pages"
+msgstr "цифрлық коллекция мен музей беттеріне қол жеткізу"
+
+#: .\templates\pages\home.html:127
+msgid "ML + Web + museum digitalization"
+msgstr "ML + Web + музейді цифрландыру"
+
+#: .\templates\pages\home.html:145
+msgid "About the museum"
+msgstr "Музей туралы"
+
+#: .\templates\pages\home.html:148
+msgid "Museum of minerals and geological heritage"
+msgstr "Минералдар мен геологиялық мұра музейі"
+
+#: .\templates\pages\home.html:151
+#, fuzzy
+#| msgid ""
+#| "The platform is designed to popularize geological knowledge and digitally "
+#| "present the museum collection.\n"
+#| "Users can study minerals, compare samples, and quickly obtain information "
+#| "about the possible nature of a find."
+msgid ""
+"\n"
+"            The platform is designed to popularize geological knowledge and "
+"digitally present the museum collection.\n"
+"            Users can study minerals, compare samples, and quickly obtain "
+"information about the possible nature of a find.\n"
+"            "
+msgstr ""
+"Платформа геологиялық білімді насихаттау және музей коллекциясын цифрлық "
+"түрде ұсыну үшін жасалған.\n"
+"Пайдаланушылар минералдарды зерттеп, үлгілерді салыстырып, табылған нысанның "
+"табиғаты туралы жедел ақпарат ала алады."
+
+#: .\templates\pages\home.html:158
+msgid "More about the museum"
+msgstr "Музей туралы толығырақ"
+
+#: .\templates\pages\home.html:164
+msgid "Collections"
+msgstr "Коллекциялар"
+
+#: .\templates\pages\home.html:165
+msgid "minerals, rocks, ore samples"
+msgstr "минералдар, тау жыныстары, кен үлгілері"
+
+#: .\templates\pages\home.html:169
+msgid "for students, schoolchildren and guests"
+msgstr "студенттерге, оқушыларға және қонақтарға"
+
+#: .\templates\pages\home.html:172
+msgid "Education"
+msgstr "Білім беру"
+
+#: .\templates\pages\home.html:173
+msgid "popularization of mineralogy and geology"
+msgstr "минералогия мен геологияны насихаттау"
+
+#: .\templates\pages\home.html:176
+msgid "ML model"
+msgstr "ML-модель"
+
+#: .\templates\pages\home.html:177
+msgid "mineral recognition from photos"
+msgstr "фото арқылы минералдарды тану"
+
+#: .\templates\pages\home.html:188
+msgid "Main features"
+msgstr "Негізгі мүмкіндіктер"
+
+#: .\templates\pages\home.html:191
+msgid "Modern digital museum service"
+msgstr "Заманауи цифрлық музей қызметі"
+
+#: .\templates\pages\home.html:198 .\templates\recognize\camera.html:37
+#: .\templates\recognize\result.html:61 .\templates\recognize\upload.html:55
+msgid "Camera"
+msgstr "Камера"
+
+#: .\templates\pages\home.html:199
+msgid "mineral recognition through the browser camera"
+msgstr "браузер камерасы арқылы минералды тану"
+
+#: .\templates\pages\home.html:204
+msgid "Photo upload"
+msgstr "Фото жүктеу"
+
+#: .\templates\pages\home.html:205
+msgid "classification by uploaded image"
+msgstr "жүктелген сурет бойынша жіктеу"
+
+#: .\templates\pages\home.html:211
+msgid "viewing the museum's digital showcase of minerals"
+msgstr "музейдің цифрлық минералдар витринасын көру"
+
+#: .\templates\pages\home.html:217
+msgid "deposits and geology of Kazakhstan"
+msgstr "Қазақстанның кенорындары мен геологиясы"
+
+#: .\templates\pages\home.html:230
+msgid "Digital showcase of minerals"
+msgstr "Минералдардың цифрлық витринасы"
+
+#: .\templates\pages\home.html:234 .\templates\pages\home.html:265
+msgid "Open collection"
+msgstr "Коллекцияны ашу"
+
+#: .\templates\pages\home.html:242
+msgid "Malachite"
+msgstr "Малахит"
+
+#: .\templates\pages\home.html:243
+msgid "Bright green copper mineral with an expressive pattern."
+msgstr "Айқын өрнегі бар ашық жасыл мыс минералы."
+
+#: .\templates\pages\home.html:250
+msgid "Quartz"
+msgstr "Кварц"
+
+#: .\templates\pages\home.html:251
+#, fuzzy
+#| msgid "One of the most widespread minerals in the Earth's crust."
+msgid "One of the most распространённых minerals in the Earth's crust."
+msgstr "Жер қыртысындағы ең кең таралған минералдардың бірі."
+
+#: .\templates\pages\home.html:258
+msgid "Obsidian"
+msgstr "Обсидиан"
+
+#: .\templates\pages\home.html:259
+msgid "Volcanic glass with a characteristic dark luster."
+msgstr "Өзіне тән қара жылтыры бар жанартаулық шыны."
+
+#: .\templates\pages\home.html:275
+msgid "Live introduction to minerals and geology"
+msgstr "Минералдар мен геологиямен тікелей танысу"
+
+#: .\templates\pages\home.html:277
+#, fuzzy
+#| msgid ""
+#| "In addition to digital recognition, visitors can explore the collection "
+#| "through guided tours,\n"
+#| "educational sessions, and interactive museum routes."
+msgid ""
+"\n"
+"            In addition to digital recognition, visitors can explore the "
+"collection through guided tours,\n"
+"            educational sessions, and interactive museum routes.\n"
+"            "
+msgstr ""
+"Цифрлық танудан бөлек, келушілер коллекциямен экскурсиялар,\n"
+"оқу сабақтары және интерактивті музей маршруттары арқылы таныса алады."
+
+#: .\templates\pages\home.html:284
+msgid "View excursions"
+msgstr "Экскурсияларды көру"
+
+#: .\templates\pages\home.html:290
+msgid "Overview tour"
+msgstr "Шолу экскурсиясы"
+
+#: .\templates\pages\home.html:291
+msgid "Key museum exhibits and main minerals."
+msgstr "Музейдің негізгі экспонаттары мен басты минералдары."
+
+#: .\templates\pages\home.html:294
+msgid "Minerals of East Kazakhstan"
+msgstr "Шығыс Қазақстан минералдары"
+
+#: .\templates\pages\home.html:295
+msgid "Geological features and samples of the region."
+msgstr "Өңірдің геологиялық ерекшеліктері мен үлгілері."
+
+#: .\templates\pages\home.html:298
+msgid "Interactive route"
+msgstr "Интерактивті маршрут"
+
+#: .\templates\pages\home.html:299
+msgid "Photo, recognition, and practical sample comparison."
+msgstr "Фото, тану және үлгілерді тәжірибелік салыстыру."
+
+#: .\templates\pages\home.html:310
+msgid "Try it now"
+msgstr "Қазір қолданып көріңіз"
+
+#: .\templates\pages\home.html:313
+msgid "Start mineral recognition right now"
+msgstr "Минералдарды тануды дәл қазір бастаңыз"
+
+#: .\templates\pages\home.html:316
+#, fuzzy
+#| msgid ""
+#| "Upload a mineral photo or use your camera to get a result\n"
+#| "and study the sample as part of the museum collection."
+msgid ""
+"\n"
+"        Upload a mineral photo or use your camera to get a result\n"
+"        and study the sample as part of the museum collection.\n"
+"        "
+msgstr ""
+"Нәтиже алу үшін минералдың фотосын жүктеңіз немесе камераны қолданыңыз\n"
+"және үлгіні музей коллекциясының бөлігі ретінде зерттеңіз."
+
+#: .\templates\pages\home.html:329
+msgid "Open camera"
+msgstr "Камераны ашу"
+
+#: .\templates\pages\home.html:338
+msgid "Mineral recognition web portal"
+msgstr "Минералдарды тану веб-порталы"
+
+#: .\templates\recognize\camera.html:34 .\templates\recognize\result.html:34
+#, fuzzy
+#| msgid "Recognize a mineral"
+msgid "Recognition"
+msgstr "Минералды таны"
+
+#: .\templates\recognize\camera.html:40
+msgid ""
+"Point the camera at the mineral, take a photo, and send it for recognition."
+msgstr ""
+
+#: .\templates\recognize\camera.html:62
+msgid "Snapshot"
+msgstr ""
+
+#: .\templates\recognize\camera.html:69
+msgid "Tip: keep the stone centered and avoid glare."
+msgstr ""
+
+#: .\templates\recognize\camera.html:76
+msgid "Retake"
+msgstr ""
+
+#: .\templates\recognize\camera.html:82
+msgid "Take a photo"
+msgstr ""
+
+#: .\templates\recognize\camera.html:91
+#, fuzzy
+#| msgid "Education"
+msgid "Quick actions"
+msgstr "Білім беру"
+
+#: .\templates\recognize\camera.html:102
+msgid "Send for recognition"
+msgstr ""
+
+#: .\templates\recognize\camera.html:107
+msgid "Upload photo instead of camera"
+msgstr ""
+
+#: .\templates\recognize\camera.html:112
+msgid "For mobile mode"
+msgstr ""
+
+#: .\templates\recognize\camera.html:114
+msgid "use the rear camera"
+msgstr ""
+
+#: .\templates\recognize\camera.html:115
+msgid "keep the mineral on a light background"
+msgstr ""
+
+#: .\templates\recognize\camera.html:116
+msgid "take a sharp photo without blur"
+msgstr ""
+
+#: .\templates\recognize\camera.html:121
+msgid "If the camera does not open"
+msgstr ""
+
+#: .\templates\recognize\camera.html:123
+msgid "Choose photo"
+msgstr ""
+
+#: .\templates\recognize\camera.html:152
+msgid "Failed to send image."
+msgstr ""
+
+#: .\templates\recognize\result.html:7 .\templates\recognize\result.html:37
+msgid "Recognition result"
+msgstr ""
+
+#: .\templates\recognize\result.html:40
+msgid ""
+"Below is the predicted mineral, its probability, and additional information "
+"about the sample."
+msgstr ""
+
+#: .\templates\recognize\result.html:49
+#, fuzzy
+#| msgid "Recognize with camera"
+msgid "Recognized image"
+msgstr "Камера арқылы тану"
+
+#: .\templates\recognize\result.html:51
+msgid "No image available"
+msgstr ""
+
+#: .\templates\recognize\result.html:57
+msgid "Recognition source"
+msgstr ""
+
+#: .\templates\recognize\result.html:63 .\templates\recognize\upload.html:54
+#, fuzzy
+#| msgid "Upload photo"
+msgid "Upload"
+msgstr "Фото жүктеу"
+
+#: .\templates\recognize\result.html:68
+msgid "Date"
+msgstr ""
+
+#: .\templates\recognize\result.html:82
+msgid "Top result"
+msgstr ""
+
+#: .\templates\recognize\result.html:96
+msgid "The system selected this sample as the most probable result."
+msgstr ""
+
+#: .\templates\recognize\result.html:101
+msgid "Confidence"
+msgstr ""
+
+#: .\templates\recognize\result.html:112
+msgid "Mineral information"
+msgstr ""
+
+#: .\templates\recognize\result.html:118 .\templates\recognize\result.html:170
+msgid "Title"
+msgstr ""
+
+#: .\templates\recognize\result.html:123 .\templates\recognize\result.html:175
+msgid "Formula"
+msgstr ""
+
+#: .\templates\recognize\result.html:130 .\templates\recognize\result.html:182
+msgid "Color"
+msgstr ""
+
+#: .\templates\recognize\result.html:137 .\templates\recognize\result.html:189
+msgid "Hardness"
+msgstr ""
+
+#: .\templates\recognize\result.html:146 .\templates\recognize\result.html:198
+msgid "Description"
+msgstr ""
+
+#: .\templates\recognize\result.html:153 .\templates\recognize\result.html:205
+msgid "Origin"
+msgstr ""
+
+#: .\templates\recognize\result.html:160 .\templates\recognize\result.html:212
+msgid "Usage"
+msgstr ""
+
+#: .\templates\recognize\result.html:221
+msgid "No additional mineral information was found in the database."
+msgstr ""
+
+#: .\templates\recognize\result.html:229
+msgid "Top-3 predictions"
+msgstr ""
+
+#: .\templates\recognize\result.html:235
+msgid "1st place"
+msgstr ""
+
+#: .\templates\recognize\result.html:246
+msgid "2nd place"
+msgstr ""
+
+#: .\templates\recognize\result.html:258
+msgid "3rd place"
+msgstr ""
+
+#: .\templates\recognize\result.html:273
+#, fuzzy
+#| msgid "Recognize a mineral"
+msgid "Recognize another photo"
+msgstr "Минералды таны"
+
+#: .\templates\recognize\result.html:278
+msgid "Back to cabinet"
+msgstr ""
+
+#: .\templates\recognize\upload.html:8
+#, fuzzy
+#| msgid "Upload photo"
+msgid "Upload photo — Altyn Altai"
+msgstr "Фото жүктеу"
+
+#: .\templates\recognize\upload.html:17
+#, fuzzy
+#| msgid "Mineral recognition web portal"
+msgid "Mineral recognition"
+msgstr "Минералдарды тану веб-порталы"
+
+#: .\templates\recognize\upload.html:23
+msgid "Home"
+msgstr ""
+
+#: .\templates\recognize\upload.html:35
+#, fuzzy
+#| msgid "Upload photo"
+msgid "Upload a mineral photo"
+msgstr "Фото жүктеу"
+
+#: .\templates\recognize\upload.html:37
+msgid ""
+"Choose an image. After submission, the result will be saved to history "
+"(cabinet)."
+msgstr ""
+
+#: .\templates\recognize\upload.html:51
+msgid "Source"
+msgstr ""
+
+#: .\templates\recognize\upload.html:61
+msgid "Photo"
+msgstr ""
+
+#: .\templates\recognize\upload.html:76
+#, fuzzy
+#| msgid "Recognize a mineral"
+msgid "Recognize and save"
+msgstr "Минералды таны"
+
+#: .\templates\recognize\upload.html:81
+msgid ""
+"Top-3 results are currently displayed. In the next step, a full ML model "
+"will be connected."
+msgstr ""
+
+#: .\venv\Lib\site-packages\sympy\solvers\simplex.py:563
+msgid "x"
+msgstr ""
+
+#: .\venv\Lib\site-packages\sympy\solvers\simplex.py:564
+msgid "y"
+msgstr ""
+
+#~ msgid "Welcome"
+#~ msgstr "Қош келдіңіз"
+
+#~ msgid "This website helps identify minerals and stones from photos."
+#~ msgstr ""
+#~ "Бұл сайт фотосуреттер арқылы минералдар мен тастарды анықтауға "
+#~ "көмектеседі."
+
+#~ msgid "You can choose Kazakh, Russian or English in the settings above."
+#~ msgstr ""
+#~ "Жоғарыдағы баптаулардан қазақ, орыс немесе ағылшын тілін таңдай аласыз."
+
+
+msgid "Profile"
+msgstr "Профиль"
+
+msgid "Hello"
+msgstr "Сәлем"
+
+msgid "My data"
+msgstr "Менің деректерім"
+
+msgid "Username, email, registration date"
+msgstr "Пайдаланушы аты, email, тіркелген күні"
+
+msgid "Recognition history"
+msgstr "Тану тарихы"
+
+msgid "All uploaded and recognized samples"
+msgstr "Жүктелген және танылған барлық үлгілер"
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Recognition statistics and popular minerals"
+msgstr "Тану статистикасы және танымал минералдар"
+
+msgid "Application"
+msgstr "Қосымша"
+
+msgid "Interface language"
+msgstr "Интерфейс тілі"
+
+msgid "Choose your preferred language"
+msgstr "Өзіңізге ыңғайлы тілді таңдаңыз"
+
+msgid "Username"
+msgstr "Пайдаланушы аты"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Registration date"
+msgstr "Тіркелген күні"
+
+msgid "Go to cabinet"
+msgstr "Кабинетке өту"
+
+msgid "Authorization"
+msgstr "Авторизация"
+
+msgid "Login to your account"
+msgstr "Аккаунтқа кіру"
+
+msgid "Sign in using your username and password."
+msgstr "Пайдаланушы аты мен құпиясөз арқылы кіріңіз."
+
+msgid "Password"
+msgstr "Құпиясөз"
+
+msgid "Do not have an account?"
+msgstr "Аккаунтыңыз жоқ па?"
+
+msgid "Login"
+msgstr "Кіру"
+
